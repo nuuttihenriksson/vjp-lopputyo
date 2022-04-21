@@ -2,12 +2,10 @@ import React from 'react';
 import {
   Box,
 } from '@mui/material';
-import {
-  ThumbUp,
-  ThumbDownOffAlt,
-} from '@mui/icons-material';
 import Video from '../materials/VJP_VideoHarkka_V3.mp4';
 import Poster from '../materials/videoposter.png';
+import './latest.css';
+import Comments from './Comments';
 
 const Latest = ({comments, changeComments}) => {
 
@@ -27,10 +25,15 @@ const Latest = ({comments, changeComments}) => {
           marginTop: '25px',
         }}
       >
-        <h3>CS:GO - Retake Highlights</h3>
-        <video width="50%" maxHeight="50%" controls="controls" poster={Poster}>
+        <h2>CS:GO - Retake Highlights</h2>
+        <video
+          className="video"
+          controls="controls"
+          poster={Poster}
+          >
           <source src={Video} type="video/mp4"/>
         </video>
+        <Comments comments={comments} changeComments={changeComments}/>
       </Box>
     </Box>
   )

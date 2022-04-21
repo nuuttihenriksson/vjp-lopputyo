@@ -1,0 +1,9 @@
+.video {
+  width: 60% !important;
+}
+
+@media only screen and (max-device-width: 900px) {
+  .video {
+    width: 95% !important;
+  }
+}

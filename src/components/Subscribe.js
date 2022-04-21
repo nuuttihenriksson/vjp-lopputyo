@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {
   Box,
+  Button,
   TextField,
 } from '@mui/material';
 
@@ -24,22 +25,33 @@ const Subscribe = () => {
       <TextField
         required
         id="outlined-required"
-        label="Username"
+        placeholder="Username"
         helperText="Visible to everyone"
         sx={{
           marginTop: '25px',
         }}
       />
-      <br/>
       <TextField
         required
         id="outlined-required"
-        label="Email"
+        placeholder="Email"
         type="email"
         sx={{
           marginTop: '25px',
+          display: 'inline-block',
+          verticalAlign: 'middle',
         }}
       />
+      <Button
+        variant="contained"
+          sx={{
+            display: 'inline-block',
+            marginTop: '25px',
+            verticalAlign: 'middle',
+          }}
+      >
+        Subscribe
+      </Button>
     </Box>
   )
 };

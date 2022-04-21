@@ -13,7 +13,7 @@ import {
 function App() {
 
   const [current, changeCurrent] = useState('home');
-  const [comments, changeComments] = useState([{name: 'Testaaja', comment: 'Nice vid!', likes: 0, dislikes: 0}]);
+  const [comments, changeComments] = useState([{id: 1, name: 'Testaaja', comment: 'Nice vid!', likes: 0, dislikes: 0}]);
   const currentActive = () => {
     if (current === 'latest') {
       return <Latest comments={comments} changeComments={changeComments}/>
