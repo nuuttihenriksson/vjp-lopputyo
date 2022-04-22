@@ -20,6 +20,8 @@ const Comment = ({ changeComments, comments }) => {
       dislikes: 0,
     }
     changeComments(comments.concat(newComment));
+    changeScreenName('');
+    changeComment('');
   }
   return (
     <Box
@@ -31,6 +33,8 @@ const Comment = ({ changeComments, comments }) => {
         <TextField
           id="outlined-required"
           placeholder="Screen name"
+          onChange={(e) => changeScreenName(e.target.value)}
+          value={screenName}
           sx={{
             width: "7%",
             display: 'inline-block',
@@ -40,6 +44,8 @@ const Comment = ({ changeComments, comments }) => {
         <TextField
           id="outlined-required"
           placeholder="Comment"
+          onChange={e => changeComment(e.target.value)}
+          value={comment}
           sx={{
             width: "10%",
             display: 'inline-block',
@@ -49,7 +55,7 @@ const Comment = ({ changeComments, comments }) => {
         />
         <Button
           variant="contained"
-          onClick={() => addComment}
+          onClick={addComment}
           sx={{
             display: 'inline-block',
             verticalAlign: 'middle',

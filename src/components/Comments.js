@@ -33,7 +33,12 @@ const Comments = ({ comments, changeComments }) => {
 
   const commentElements = comments.map((comment) => {
     return (
-      <Box key={`comment-${comment.id}`}>
+      <Box
+        key={`comment-${comment.id}`}
+        sx={{
+          marginBottom: "20px",
+        }}
+      >
         <Box
           sx={{
             display: 'inline-block',
