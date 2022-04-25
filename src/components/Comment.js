@@ -4,6 +4,7 @@ import {
   TextField,
   Button,
 } from '@mui/material';
+import './comment.css';
 
 const Comment = ({ changeComments, comments }) => {
   const [screenName, changeScreenName] = useState('');
@@ -11,7 +12,7 @@ const Comment = ({ changeComments, comments }) => {
 
   const addComment = () => {
     if (screenName === '' || comment === '') return;
-    const id = comments[comments.length-1].id + 1;
+    const id = comments[comments.length - 1].id + 1;
     const newComment = {
       id: id,
       name: screenName,
@@ -25,20 +26,19 @@ const Comment = ({ changeComments, comments }) => {
   }
   return (
     <Box
-        sx={{
-          marginBottom: "30px",
-        }}
-      >
-        <h4>Comments:</h4>
+      sx={{
+        marginBottom: "30px",
+      }}
+    >
+      <h4>Comments:</h4>
+      <Box className="comment">
         <TextField
           id="outlined-required"
           placeholder="Screen name"
           onChange={(e) => changeScreenName(e.target.value)}
           value={screenName}
           sx={{
-            width: "7%",
-            display: 'inline-block',
-            verticalAlign: 'middle',
+            width: "150px",
           }}
         />
         <TextField
@@ -47,24 +47,17 @@ const Comment = ({ changeComments, comments }) => {
           onChange={e => changeComment(e.target.value)}
           value={comment}
           sx={{
-            width: "10%",
-            display: 'inline-block',
-            verticalAlign: 'middle',
-            marginLeft: '10px',
+            width: "250px",
           }}
         />
         <Button
           variant="contained"
           onClick={addComment}
-          sx={{
-            display: 'inline-block',
-            verticalAlign: 'middle',
-            marginLeft: '10px',
-          }}
         >
           Send
         </Button>
       </Box>
+    </Box>
   )
 }
 

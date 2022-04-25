@@ -1,0 +1,15 @@
+.comment {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media only screen and (max-device-width: 900px) {
+  .comment {
+    flex-direction: column !important;
+  }
+}
