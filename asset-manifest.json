@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/vjp-lopputyo/static/css/main.48018169.css",
+    "main.js": "/vjp-lopputyo/static/js/main.c10789a9.js",
+    "static/media/VJP_VideoHarkka_V3.mp4": "/vjp-lopputyo/static/media/VJP_VideoHarkka_V3.cac4d96ab70aa3ee57da.mp4",
+    "static/media/videoposter.png": "/vjp-lopputyo/static/media/videoposter.673d3f0f62ed146f4391.png",
+    "static/media/csgo_raffle.jpg": "/vjp-lopputyo/static/media/csgo_raffle.de58a4750720d53762a3.jpg",
+    "index.html": "/vjp-lopputyo/index.html",
+    "main.48018169.css.map": "/vjp-lopputyo/static/css/main.48018169.css.map",
+    "main.c10789a9.js.map": "/vjp-lopputyo/static/js/main.c10789a9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48018169.css",
+    "static/js/main.c10789a9.js"
+  ]
+}
