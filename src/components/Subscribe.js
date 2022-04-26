@@ -6,12 +6,13 @@ import {
 } from '@mui/material';
 import './subscribe.css';
 
+// Tilaus osio, joka lähettäisi syötetyn spostin backendille. Ottaa subscriberit ja niiden vaihtamiseen käytetyn funktion propseina.
 const Subscribe = ({ subs, changeSubs }) => {
 
   const [username, changeUsername] = useState('');
   const [email, changeEmail] = useState('');
 
-
+  // apufunktio yhden subscriberin lisäämiselle.
   const addSub = () => {
     if (username === '' || email === '') return;
 
@@ -30,7 +31,7 @@ const Subscribe = ({ subs, changeSubs }) => {
   const getSubs = subs.slice().reverse().map((sub, index) => {
     return (
       <Box key={`sub-${index}`}>
-        <a>{sub}</a>
+        <p>{sub}</p>
       </Box>
     )
   })
@@ -46,9 +47,9 @@ const Subscribe = ({ subs, changeSubs }) => {
         }}
       >
         <h2>Subscribe to notifications</h2>
-        <a>This form is used to signup for email notifications of new content.</a>
+        <p>This form is used to signup for email notifications of new content.</p>
         <br />
-        <a>Your username is shown on this page to show others that you support the content creator</a>
+        <p>Your username is shown on this page to show others that you support the content creator</p>
         <br />
         <Box className="subForm">
           <TextField

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Box,
   Divider,
@@ -7,6 +7,10 @@ import {
 import Comment from './Comment';
 import OneComment from './OneComment';
 
+/*
+Toimii rakenteena kommentointiosiolle, johon kuuluu kommentin kirjoittaminen ja olemassa olevien kommenttien listaaminen.
+Kommenttikenttä haetaan Comment tiedostosta ja olemassa olevat kommentit mäpätään OneComment olioiksi.
+**/
 const Comments = ({ comments, changeComments }) => {
 
   return (
@@ -16,7 +20,7 @@ const Comments = ({ comments, changeComments }) => {
           <Chip label="Leave a comment" />
         </Divider>
       </Box>
-      <a>Enjoyed the video? Leave a comment!</a>
+      <p>Enjoyed the video? Leave a comment!</p>
       <Comment changeComments={changeComments} comments={comments} />
       <Box sx={{ maxWidth: "70%", margin: "auto" }}>
         <Divider sx={{ marginBottom: "15px" }}>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     ThumbUp,
     ThumbDown,
@@ -13,6 +13,7 @@ const OneComment = ({ comments, changeComments, comment }) => {
     const liked = comment.liked;
     const disliked = comment.disliked;
 
+    // apufunktio, joka palautaa oikean like -komponentin.
     const getLike = (comment) => {
         if (liked) {
             return (
@@ -30,7 +31,7 @@ const OneComment = ({ comments, changeComments, comment }) => {
                             cursor: "pointer",
                         }}
                     />
-                    <a style={{ display: 'inline-block', paddingLeft: "2px" }}>{comment.likes}</a>
+                    <p style={{ display: 'inline-block', paddingLeft: "2px" }}>{comment.likes}</p>
                 </Box>
             );
         } else {
@@ -49,12 +50,13 @@ const OneComment = ({ comments, changeComments, comment }) => {
                             cursor: "pointer",
                         }}
                     />
-                    <a style={{ display: 'inline-block', paddingLeft: "2px" }}>{comment.likes}</a>
+                    <p style={{ display: 'inline-block', paddingLeft: "2px" }}>{comment.likes}</p>
                 </Box>
             );
         }
     }
 
+    // apufunktio, joka palauttaa oikean dislike -komponentin.
     const getDislike = (comment) => {
         if (disliked) {
             return (
@@ -72,7 +74,7 @@ const OneComment = ({ comments, changeComments, comment }) => {
                             cursor: "pointer",
                         }}
                     />
-                    <a style={{ display: "inline-block", paddingLeft: "2px" }}>{comment.dislikes}</a>
+                    <p style={{ display: "inline-block", paddingLeft: "2px" }}>{comment.dislikes}</p>
                 </Box>
             );
         } else {
@@ -91,12 +93,13 @@ const OneComment = ({ comments, changeComments, comment }) => {
                             cursor: "pointer",
                         }}
                     />
-                    <a style={{ display: 'inline-block', paddingLeft: "2px" }}>{comment.dislikes}</a>
+                    <p style={{ display: 'inline-block', paddingLeft: "2px" }}>{comment.dislikes}</p>
                 </Box>
             );
         }
     }
 
+    // apufunktio, jonka avulla kommentista tykkääminen käsitellään oikein.
     const like = (comment) => {
         changeComments(comments.map((com) => {
             if (com.id === comment.id) {
@@ -119,6 +122,7 @@ const OneComment = ({ comments, changeComments, comment }) => {
         }
     }
 
+    // apufunktio, joka käsittelee disliken oikein.
     const dislike = (comment) => {
         changeComments(comments.map((com) => {
             if (com.id === comment.id) {
@@ -163,8 +167,8 @@ const OneComment = ({ comments, changeComments, comment }) => {
                         verticalAlign: 'middle',
                     }}
                 >
-                    <a style={{ fontWeight: "bold" }}>{comment.name}:</a>
-                    <a style={{ marginLeft: "5px" }}>{comment.comment}</a>
+                    <p style={{ fontWeight: "bold" }}>{comment.name}:</p>
+                    <p style={{ marginLeft: "5px" }}>{comment.comment}</p>
                 </Box>
                 <Box>
                     {getLike(comment)}

@@ -6,10 +6,12 @@ import {
 } from '@mui/material';
 import './comment.css';
 
+// Palauttaa kommenttien kirjoittamiseen käytetyn osan. Saa kommentit ja funktion kommenttien vaihtamiselle propseina.
 const Comment = ({ changeComments, comments }) => {
   const [screenName, changeScreenName] = useState('');
   const [comment, changeComment] = useState('');
 
+  // apufunktio, joka lisää yhden kommentin, mikäli kumpikaan kentistä ei ole tyhjänä.
   const addComment = () => {
     if (screenName === '' || comment === '') return;
     const id = comments[comments.length - 1].id + 1;

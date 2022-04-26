@@ -7,7 +7,8 @@ import Poster from '../materials/videoposter.png';
 import './latest.css';
 import Comments from './Comments';
 
-const Latest = ({comments, changeComments}) => {
+// palauttaa sivun, jolla näkyy viimeinen video. Saa kommentit ja niiden vaihtamiseen käytetyn funktion propseina.
+const Latest = ({ comments, changeComments }) => {
 
   return (
     <Box
@@ -30,10 +31,10 @@ const Latest = ({comments, changeComments}) => {
           className="video"
           controls="controls"
           poster={Poster}
-          >
-          <source src={Video} type="video/mp4"/>
+        >
+          <source src={Video} type="video/mp4" />
         </video>
-        <Comments comments={comments} changeComments={changeComments}/>
+        <Comments comments={comments} changeComments={changeComments} />
       </Box>
     </Box>
   )

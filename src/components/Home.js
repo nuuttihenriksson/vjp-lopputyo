@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Box,
-  Button,
 } from '@mui/material';
 import Image from '../materials/logo.jpg';
 import {
@@ -13,6 +12,7 @@ import {
 import { CgCopyright } from 'react-icons/cg'
 import Raffle from '../materials/csgo_raffle.jpg';
 
+// palauttaa kotisivun.
 const Home = () => {
   return (
     <Box sx={{ alignItems: 'center', alignContent: 'center', textAlign: 'center' }}>
@@ -45,10 +45,10 @@ const Home = () => {
       </p>
       <h3>This weeks raffle</h3>
       <h4>USP-S | Neo-Noir | Field tested</h4>
-      <img src={Raffle} style={{ maxWidth: "95%" }} />
+      <img src={Raffle} style={{ maxWidth: "95%" }} alt="current raffle" />
       <br />
       <br />
-      <CgCopyright /> <a>Nuutti Henriksson 2022</a>
+      <CgCopyright /> <p>Nuutti Henriksson 2022</p>
     </Box>
   )
 };
