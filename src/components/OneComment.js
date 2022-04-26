@@ -143,7 +143,6 @@ const OneComment = ({ comments, changeComments, comment }) => {
 
     return (
         <Box
-            key={`comment-${comment.id}`}
             sx={{
                 backgroundColor: "rgba(44, 41, 102, 0.08)",
                 padding: "7px",

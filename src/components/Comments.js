@@ -10,7 +10,7 @@ import OneComment from './OneComment';
 const Comments = ({ comments, changeComments }) => {
 
   return (
-    <Box>
+    <Box sx={{ paddingBottom: "30px" }}>
       <Box sx={{ maxWidth: "80%", margin: "auto" }}>
         <Divider sx={{ marginTop: "20px", marginBottom: "20px" }} variant="middle">
           <Chip label="Leave a comment" />
@@ -27,7 +27,7 @@ const Comments = ({ comments, changeComments }) => {
         {
           comments.map((comment) => {
             return (
-              <OneComment comments={comments} changeComments={changeComments} comment={comment} />
+              <OneComment key={`comment-${comment.id}`} comments={comments} changeComments={changeComments} comment={comment} />
             )
           })
         }

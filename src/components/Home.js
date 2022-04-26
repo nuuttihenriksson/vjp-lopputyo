@@ -10,6 +10,7 @@ import {
   SiTwitch,
   SiTwitter,
 } from 'react-icons/si'
+import { CgCopyright } from 'react-icons/cg'
 import Raffle from '../materials/csgo_raffle.jpg';
 
 const Home = () => {
@@ -25,7 +26,7 @@ const Home = () => {
         Check out all my social media listed below!
       </p>
       <Box sx={{ display: "flex", gap: "10px", justifyContent: "center" }}>
-        <a href="https://www.twich.tv/bestpotato_">
+        <a href="https://www.twitch.tv/bestpotato_">
           <SiTwitch size={40} color="#9146FF" />
         </a>
         <a href="https://steamcommunity.com/id/bestpotat0/">
@@ -34,7 +35,7 @@ const Home = () => {
         <a href="https://twitter.com">
           <SiTwitter size={40} color="#1DA1F2" />
         </a>
-        <a href="https://steamcommunity.com/id/bestpotat0/">
+        <a href="https://www.faceit.com/en/players/BestPotato_">
           <SiFaceit size={31} style={{ backgroundColor: "black", borderRadius: "25px", padding: "5px" }} color="orange" />
         </a>
       </Box>
@@ -45,6 +46,9 @@ const Home = () => {
       <h3>This weeks raffle</h3>
       <h4>USP-S | Neo-Noir | Field tested</h4>
       <img src={Raffle} style={{ maxWidth: "95%" }} />
+      <br />
+      <br />
+      <CgCopyright /> <a>Nuutti Henriksson 2022</a>
     </Box>
   )
 };
