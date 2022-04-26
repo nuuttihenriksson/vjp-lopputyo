@@ -8,6 +8,7 @@ import {
   SiSteam,
   SiTwitch,
   SiTwitter,
+  SiDiscord,
 } from 'react-icons/si'
 import { CgCopyright } from 'react-icons/cg'
 import Raffle from '../materials/csgo_raffle.jpg';
@@ -29,6 +30,9 @@ const Home = () => {
         <a href="https://www.twitch.tv/bestpotato_">
           <SiTwitch size={40} color="#9146FF" />
         </a>
+        <a href="https://www.discord.com">
+          <SiDiscord size={40} color="#5865F2" />
+        </a>
         <a href="https://steamcommunity.com/id/bestpotat0/">
           <SiSteam size={40} color="black" />
         </a>
@@ -48,7 +52,7 @@ const Home = () => {
       <img src={Raffle} style={{ maxWidth: "95%" }} alt="current raffle" />
       <br />
       <br />
-      <CgCopyright /> <p>Nuutti Henriksson 2022</p>
+      <CgCopyright style={{ display: "inline-block" }} /> <p style={{ display: "inline-block" }}>Nuutti Henriksson 2022</p>
     </Box>
   )
 };

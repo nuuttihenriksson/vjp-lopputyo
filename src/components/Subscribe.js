@@ -5,19 +5,28 @@ import {
   TextField,
 } from '@mui/material';
 import './subscribe.css';
+import { useToasts } from 'react-toast-notifications';
 
 // Tilaus osio, joka lähettäisi syötetyn spostin backendille. Ottaa subscriberit ja niiden vaihtamiseen käytetyn funktion propseina.
 const Subscribe = ({ subs, changeSubs }) => {
 
   const [username, changeUsername] = useState('');
   const [email, changeEmail] = useState('');
+  const { addToast } = useToasts();
 
   // apufunktio yhden subscriberin lisäämiselle.
   const addSub = () => {
-    if (username === '' || email === '') return;
+    if (username === '' || email === '') {
+      addToast('One or more fields are empty', { appearance: 'error', autoDismiss: true });
+      return;
+    }
+    if (!matchEmail(email)) {
+      addToast('Email not valid', { appearance: 'error', autoDismiss: true });
+      return;
+    }
 
     console.log(`Here we would send the email: ${email} and username: ${username} to a backend`);
-
+    addToast('Subscription successful', { appearance: 'success', autoDismiss: true });
     if (subs.length === 10) {
       changeSubs(subs.slice(1, 9).concat(username));
     } else {
@@ -28,6 +37,13 @@ const Subscribe = ({ subs, changeSubs }) => {
     changeUsername('');
   }
 
+  // helper function that uses regular expression to check for email validity.
+  // acquired from stackoverflow (https://stackoverflow.com/questions/46155/whats-the-best-way-to-validate-an-email-address-in-javascript)
+  const matchEmail = (email) => {
+    return email.match(
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+  }
   const getSubs = subs.slice().reverse().map((sub, index) => {
     return (
       <Box key={`sub-${index}`}>

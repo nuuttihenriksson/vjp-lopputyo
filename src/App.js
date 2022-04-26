@@ -3,6 +3,7 @@ import './App.css';
 import Latest from './components/Latest';
 import Home from './components/Home';
 import Subscribe from './components/Subscribe';
+import { ToastProvider } from 'react-toast-notifications';
 import {
   AppBar,
   Box,
@@ -51,7 +52,12 @@ function App() {
           <Button color="inherit" onClick={clickSub}>Subscribe</Button>
         </Toolbar>
       </AppBar>
-      {currentActive()}
+      <ToastProvider
+        autoDismissTimeout={3500}
+        placement={"top-right"}
+      >
+        {currentActive()}
+      </ToastProvider>
     </Box>
   );
 }
