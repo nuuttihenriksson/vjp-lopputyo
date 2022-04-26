@@ -30,7 +30,6 @@ const Comment = ({ changeComments, comments }) => {
         marginBottom: "30px",
       }}
     >
-      <h4>Comments:</h4>
       <Box className="comment">
         <TextField
           id="outlined-required"
@@ -53,6 +52,9 @@ const Comment = ({ changeComments, comments }) => {
         <Button
           variant="contained"
           onClick={addComment}
+          sx={{
+            background: "#0e00a3",
+          }}
         >
           Send
         </Button>

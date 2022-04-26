@@ -27,9 +27,10 @@ const OneComment = ({ comments, changeComments, comment }) => {
                             marginLeft: "20px",
                             display: 'inline-block',
                             verticalAlign: 'middle',
+                            cursor: "pointer",
                         }}
                     />
-                    <a style={{ display: 'inline-block', }}>{comment.likes}</a>
+                    <a style={{ display: 'inline-block', paddingLeft: "2px" }}>{comment.likes}</a>
                 </Box>
             );
         } else {
@@ -45,9 +46,10 @@ const OneComment = ({ comments, changeComments, comment }) => {
                             marginLeft: "20px",
                             display: 'inline-block',
                             verticalAlign: 'middle',
+                            cursor: "pointer",
                         }}
                     />
-                    <a style={{ display: 'inline-block', }}>{comment.likes}</a>
+                    <a style={{ display: 'inline-block', paddingLeft: "2px" }}>{comment.likes}</a>
                 </Box>
             );
         }
@@ -67,9 +69,10 @@ const OneComment = ({ comments, changeComments, comment }) => {
                             marginLeft: "20px",
                             display: 'inline-block',
                             verticalAlign: 'middle',
+                            cursor: "pointer",
                         }}
                     />
-                    <a style={{ display: "inline-block" }}>{comment.dislikes}</a>
+                    <a style={{ display: "inline-block", paddingLeft: "2px" }}>{comment.dislikes}</a>
                 </Box>
             );
         } else {
@@ -85,9 +88,10 @@ const OneComment = ({ comments, changeComments, comment }) => {
                             marginLeft: "20px",
                             display: 'inline-block',
                             verticalAlign: 'middle',
+                            cursor: "pointer",
                         }}
                     />
-                    <a style={{ display: 'inline-block', }}>{comment.dislikes}</a>
+                    <a style={{ display: 'inline-block', paddingLeft: "2px" }}>{comment.dislikes}</a>
                 </Box>
             );
         }
@@ -138,10 +142,18 @@ const OneComment = ({ comments, changeComments, comment }) => {
     }
 
     return (
-        <Box key={`comment-${comment.id}`}>
+        <Box
+            key={`comment-${comment.id}`}
+            sx={{
+                backgroundColor: "rgba(44, 41, 102, 0.08)",
+                padding: "7px",
+                maxWidth: "60%",
+                margin: "auto",
+                marginBottom: "20px",
+            }}
+        >
             <Box
                 sx={{
-                    marginBottom: "20px",
                     display: 'inline-block',
                     verticalAlign: 'middle',
                 }}
@@ -152,11 +164,14 @@ const OneComment = ({ comments, changeComments, comment }) => {
                         verticalAlign: 'middle',
                     }}
                 >
-                    <a>{comment.name}:</a>
+                    <a style={{ fontWeight: "bold" }}>{comment.name}:</a>
                     <a style={{ marginLeft: "5px" }}>{comment.comment}</a>
                 </Box>
-                {getLike(comment)}
-                {getDislike(comment)}
+                <Box>
+                    {getLike(comment)}
+                    {getDislike(comment)}
+                </Box>
+
             </Box>
         </Box>
     );

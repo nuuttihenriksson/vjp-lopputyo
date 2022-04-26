@@ -38,7 +38,7 @@ function App() {
   }
 
   return (
-    <Box>
+    <Box style={{ backgroundColor: "rgba(7, 0, 230, 0.03)" }}>
       <AppBar position="static" sx={{ alignItems: 'center', background: "#0e00a3" }} >
         <Toolbar sx={{ background: "#0e00a3" }}>
           <Button color="inherit" onClick={clickHome}>Home</Button>

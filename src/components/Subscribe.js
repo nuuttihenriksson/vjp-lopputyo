@@ -48,6 +48,8 @@ const Subscribe = ({ subs, changeSubs }) => {
         <h2>Subscribe to notifications</h2>
         <a>This form is used to signup for email notifications of new content.</a>
         <br />
+        <a>Your username is shown on this page to show others that you support the content creator</a>
+        <br />
         <Box className="subForm">
           <TextField
             required
@@ -67,6 +69,9 @@ const Subscribe = ({ subs, changeSubs }) => {
           <Button
             variant="contained"
             onClick={addSub}
+            sx={{
+              background: "#0e00a3",
+            }}
           >
             Subscribe
           </Button>
@@ -83,7 +88,7 @@ const Subscribe = ({ subs, changeSubs }) => {
         <h3>Last 10 subscribers:</h3>
         {getSubs}
       </Box>
-    </Box>
+    </Box >
   )
 };
 
