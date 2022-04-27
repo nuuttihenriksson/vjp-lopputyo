@@ -4,6 +4,7 @@ import Latest from './components/Latest';
 import Home from './components/Home';
 import Subscribe from './components/Subscribe';
 import { ToastProvider } from 'react-toast-notifications';
+import { CgCopyright } from 'react-icons/cg'
 import {
   AppBar,
   Box,
@@ -58,6 +59,11 @@ function App() {
       >
         {currentActive()}
       </ToastProvider>
+      <br />
+      <br />
+      <Box sx={{ alignItems: 'center', alignContent: 'center', textAlign: 'center' }}>
+        <CgCopyright style={{ display: "inline-block", }} /> <p style={{ display: "inline-block", }}>Nuutti Henriksson 2022</p>
+      </Box>
     </Box>
   );
 }

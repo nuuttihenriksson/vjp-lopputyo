@@ -10,7 +10,6 @@ import {
   SiTwitter,
   SiDiscord,
 } from 'react-icons/si'
-import { CgCopyright } from 'react-icons/cg'
 import Raffle from '../materials/csgo_raffle.jpg';
 
 // palauttaa kotisivun.
@@ -50,9 +49,6 @@ const Home = () => {
       <h3>This weeks raffle</h3>
       <h4>USP-S | Neo-Noir | Field tested</h4>
       <img src={Raffle} style={{ maxWidth: "95%" }} alt="current raffle" />
-      <br />
-      <br />
-      <CgCopyright style={{ display: "inline-block" }} /> <p style={{ display: "inline-block" }}>Nuutti Henriksson 2022</p>
     </Box>
   )
 };

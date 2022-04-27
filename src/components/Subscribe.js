@@ -41,6 +41,7 @@ const Subscribe = ({ subs, changeSubs }) => {
   // acquired from stackoverflow (https://stackoverflow.com/questions/46155/whats-the-best-way-to-validate-an-email-address-in-javascript)
   const matchEmail = (email) => {
     return email.match(
+      // eslint-disable-next-line
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
   }
@@ -63,10 +64,10 @@ const Subscribe = ({ subs, changeSubs }) => {
         }}
       >
         <h2>Subscribe to notifications</h2>
-        <p>This form is used to signup for email notifications of new content.</p>
+        <p>This form is used to signup for email notifications.</p>
+        <p>Notifications include notifications of the stream schedule and live annoncements, notifications of raffles and much more!</p>
         <br />
         <p>Your username is shown on this page to show others that you support the content creator</p>
-        <br />
         <Box className="subForm">
           <TextField
             required
