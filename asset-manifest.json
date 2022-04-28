@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/vjp-lopputyo/static/css/main.48018169.css",
-    "main.js": "/vjp-lopputyo/static/js/main.275a9027.js",
+    "main.css": "/vjp-lopputyo/static/css/main.1bc98c1d.css",
+    "main.js": "/vjp-lopputyo/static/js/main.f8216675.js",
     "static/media/VJP_VideoHarkka_V3.mp4": "/vjp-lopputyo/static/media/VJP_VideoHarkka_V3.cac4d96ab70aa3ee57da.mp4",
     "static/media/videoposter.png": "/vjp-lopputyo/static/media/videoposter.673d3f0f62ed146f4391.png",
+    "static/media/csgo-hero.jpg": "/vjp-lopputyo/static/media/csgo-hero.9a884f402c0bfff9af3d.jpg",
     "static/media/csgo_raffle.jpg": "/vjp-lopputyo/static/media/csgo_raffle.de58a4750720d53762a3.jpg",
     "index.html": "/vjp-lopputyo/index.html",
-    "main.48018169.css.map": "/vjp-lopputyo/static/css/main.48018169.css.map",
-    "main.275a9027.js.map": "/vjp-lopputyo/static/js/main.275a9027.js.map"
+    "main.1bc98c1d.css.map": "/vjp-lopputyo/static/css/main.1bc98c1d.css.map",
+    "main.f8216675.js.map": "/vjp-lopputyo/static/js/main.f8216675.js.map"
   },
   "entrypoints": [
-    "static/css/main.48018169.css",
-    "static/js/main.275a9027.js"
+    "static/css/main.1bc98c1d.css",
+    "static/js/main.f8216675.js"
   ]
 }
