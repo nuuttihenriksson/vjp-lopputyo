@@ -61,7 +61,7 @@ const Comment = ({ changeComments, comments }) => {
           variant="contained"
           onClick={addComment}
           sx={{
-            background: "#0e00a3",
+            background: "#623CEA",
           }}
         >
           Send

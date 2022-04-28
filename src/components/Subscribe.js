@@ -88,7 +88,7 @@ const Subscribe = ({ subs, changeSubs }) => {
             variant="contained"
             onClick={addSub}
             sx={{
-              background: "#0e00a3",
+              background: "#623CEA",
             }}
           >
             Subscribe

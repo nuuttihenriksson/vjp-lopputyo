@@ -11,6 +11,7 @@ import {
   Button,
   Toolbar,
 } from '@mui/material';
+import Hero from './materials/csgo-hero.jpg';
 
 function App() {
   // valmiit muuttujat aktiiviselle sivulle, uusimman videon kommenteille sekä tilaajille.
@@ -46,8 +47,9 @@ function App() {
 
   return (
     <Box>
-      <AppBar position="static" sx={{ alignItems: 'center', background: "#0e00a3" }} >
-        <Toolbar sx={{ background: "#0e00a3" }}>
+      <img src={Hero} alt="hero" style={{ maxWidth: "100%", display: "block" }} className="hero" />
+      <AppBar position="static" sx={{ alignItems: 'center', background: "#623CEA" }} >
+        <Toolbar sx={{ background: "#623CEA" }}>
           <Button color="inherit" onClick={clickHome}>Home</Button>
           <Button color="inherit" onClick={clickLatest}>Latest</Button>
           <Button color="inherit" onClick={clickSub}>Subscribe</Button>
@@ -57,7 +59,9 @@ function App() {
         autoDismissTimeout={3500}
         placement={"top-right"}
       >
-        {currentActive()}
+        <Box className="content">
+          {currentActive()}
+        </Box>
       </ToastProvider>
       <br />
       <br />
