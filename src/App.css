@@ -48,6 +48,18 @@ p {
     visibility: hidden;
     display: none !important;
   }
+
+  .raffleHeading {
+    margin-bottom: 0px;
+  }
+
+  .raffleBox h4 {
+    margin-block-start: 0px !important;
+  }
+
+  .raffleTextBox {
+    width: 80% !important;
+  }
 }
 
 html,

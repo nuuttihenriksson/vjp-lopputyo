@@ -46,16 +46,15 @@ const Home = () => {
       <p>
         I give out one free skin every week. Partitipation conditions vary depending on the week. More information below.
       </p>
-      <h3 style={{ marginTop: "30px" }}>This weeks raffle</h3>
+      <h3 style={{ marginTop: "30px" }} className="raffleHeading">This weeks raffle</h3>
       <Box sx={{ display: "flex", justifyContent: "space-evenly", marginTop: "10px" }} className="raffleBox">
-        <Box sx={{ verticalAlign: "middle", width: "44%", margin: "auto" }}>
+        <Box sx={{ verticalAlign: "middle", width: "44%", margin: "auto" }} className="raffleTextBox">
           <h4>USP-S | Neo-Noir | Field tested</h4>
           <p style={{ maxWidth: "45ch" }}>
             Will be given out at the end of the stream on saturday.
             Followers will get one token in the raffle and subscribers get 5 tokens.
             Those subscribed to the email notifications also get an extra token.
           </p>
-          <br />
           <p style={{ maxWidth: "45ch" }}>
             Make sure to link steam account to your twitch, as the skin will be given out to that account.
             If there is no linked account, then a new winner is chosen.
