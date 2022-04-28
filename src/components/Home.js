@@ -46,9 +46,9 @@ const Home = () => {
       <p>
         I give out one free skin every week. Partitipation conditions vary depending on the week. More information below.
       </p>
-      <h3 style={{ marginTop: "50px" }}>This weeks raffle</h3>
-      <Box sx={{ display: "flex", justifyContent: "space-evenly" }} className="raffleBox">
-        <Box sx={{ verticalAlign: "middle", width: "44%", }}>
+      <h3 style={{ marginTop: "30px" }}>This weeks raffle</h3>
+      <Box sx={{ display: "flex", justifyContent: "space-evenly", marginTop: "10px" }} className="raffleBox">
+        <Box sx={{ verticalAlign: "middle", width: "44%", margin: "auto" }}>
           <h4>USP-S | Neo-Noir | Field tested</h4>
           <p style={{ maxWidth: "45ch" }}>
             Will be given out at the end of the stream on saturday.
@@ -61,7 +61,7 @@ const Home = () => {
             If there is no linked account, then a new winner is chosen.
           </p>
         </Box>
-        <img src={Raffle} style={{ maxWidth: "44%", }} alt="current raffle" />
+        <img src={Raffle} style={{ maxWidth: "44%", margin: "auto" }} alt="current raffle" />
       </Box>
     </Box>
   )
