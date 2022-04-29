@@ -54,7 +54,7 @@ const Subscribe = ({ subs, changeSubs }) => {
   })
 
   return (
-    <Box>
+    <Box className="content">
       <Box
         sx={{
           alignItems: 'center',

@@ -14,7 +14,7 @@ Kommenttikenttä haetaan Comment tiedostosta ja olemassa olevat kommentit mäpä
 const Comments = ({ comments, changeComments }) => {
 
   return (
-    <Box sx={{ paddingBottom: "30px" }}>
+    <Box sx={{ paddingBottom: "30px" }} className="content">
       <Box sx={{ maxWidth: "80%", margin: "auto" }}>
         <Divider sx={{ marginTop: "20px", marginBottom: "20px" }} variant="middle">
           <Chip label="Leave a comment" />

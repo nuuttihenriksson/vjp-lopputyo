@@ -11,7 +11,7 @@ import {
   Button,
   Toolbar,
 } from '@mui/material';
-import Hero from './materials/csgo-hero.jpg';
+import Hero from './materials/csgo.jpg';
 
 function App() {
   // valmiit muuttujat aktiiviselle sivulle, uusimman videon kommenteille sekä tilaajille.
@@ -59,7 +59,7 @@ function App() {
         autoDismissTimeout={3500}
         placement={"top-right"}
       >
-        <Box className="content">
+        <Box >
           {currentActive()}
         </Box>
       </ToastProvider>
