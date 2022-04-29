@@ -17,6 +17,7 @@ const Latest = ({ comments, changeComments }) => {
         justifyContent: 'center',
         marginTop: '25px',
       }}
+      className="content"
     >
       <Box
         sx={{
